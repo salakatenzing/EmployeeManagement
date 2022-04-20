@@ -4,12 +4,12 @@ const client = new Client({
   user: "postgres",
   port: 5432,
   password: "1234",
-  database: "perntodo"
+  database: "employeedb"
 })
 
 client.connect();
 
-client.query(`SELECT * FROM todo`, (err, res) => {
+client.query(`SELECT * FROM employee`, (err, res) => {
   if(!err){
     // console.log(res.rows);
     console.log('Database connected');
